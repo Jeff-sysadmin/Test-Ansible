@@ -36,6 +36,4 @@
     - name: deploy index.html
       become: yes
       become_user: root
-      copy:
-        dest: /var/www/html/index.html
-        src: /tmp/index.html
+      command: echo "welcome" >> /var/www/html/index.php
