@@ -1,7 +1,10 @@
-- hosts: 51.158.162.66
+---
+- hosts: apache
+  sudo: yes
   tasks:
     - name: install apache2
-      apt: name=apache2 state=latest
-  
-    - name: Install php
-      apt: name=php state=latest
+      apt: name=apache2 update_cache=yes state=latest
+      
+handlers:
+    - name: restart apache2
+      service: name=apache2 state=restarted
