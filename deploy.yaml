@@ -1,4 +1,4 @@
-- hosts: webservers
+- hosts: 51.158.162.66
   tasks:
     - name: install apache2
       apt: name=apache2 state=latest
