@@ -1,6 +1,12 @@
 # Setup LAMP Stack
 - hosts: 144.217.243.29
   tasks:
+    - name: Install yum utils
+  package:
+    name:
+    - yum-utils
+    - "@Development tools"
+    lock_timeout: 180
     - name: install lamp stack
       become: yes
       become_user: root
