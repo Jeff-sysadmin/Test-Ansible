@@ -1,6 +1,4 @@
+- hosts: webservers
   tasks:
-    - name: 1. install Apache
-      apt: name=apache2 state=present
-
-    - name: 2. install PHP module for Apache
-      apt: name=libapache2-mod-php5 state=present
+    - name: install apache2
+      apt: name=apache2 state=latest
