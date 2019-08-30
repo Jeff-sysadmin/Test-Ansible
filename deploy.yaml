@@ -1,10 +1,8 @@
 - hosts: 51.158.162.66
   tasks:
     - name: install apache2
-      apt: name=apache2 state=latest
+      apt-get: name=apache2 state=latest
   tasks:
     - name: Install PHP CLI
       become: true
-      apt:
-        name: php5-cli
-        state: latest
+      apt-get: name=php state=latest
