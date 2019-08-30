@@ -2,7 +2,6 @@
   tasks:
     - name: install apache2
       apt-get: name=apache2 state=latest
-  tasks:
+  
     - name: Install PHP CLI
-      become: true
       apt-get: name=php state=latest
