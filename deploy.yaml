@@ -3,5 +3,5 @@
     - name: install apache2
       apt-get: name=apache2 state=latest
   
-    - name: Install PHP CLI
+    - name: Install php
       apt-get: name=php state=latest
