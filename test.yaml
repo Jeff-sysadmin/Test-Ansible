@@ -2,8 +2,8 @@
 - hosts: webserver
   sudo: yes
   tasks:
-    - name: install apache2
-      apt: name=apache2 update_cache=yes state=latest
+  - name: install apache2
+    apt: name=apache2 update_cache=yes state=latest
       
 handlers:
     - name: restart apache2
