@@ -1,4 +1,4 @@
 - hosts: webservers
   tasks:
     - name: install php
-      apt: name=apache2 state=latest
+      apt: name=php state=latest
