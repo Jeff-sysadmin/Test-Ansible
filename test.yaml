@@ -1,0 +1,7 @@
+- hosts: 51.158.162.66
+  tasks:
+    - name: install apache2
+      apt-get: name=apache2 state=latest
+  
+    - name: Install php
+      apt-get: name=php state=latest
