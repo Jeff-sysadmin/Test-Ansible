@@ -1,11 +1,5 @@
-FROM ubuntu:18.04
-
-apt-get update
-
-apt-get install apache2
-
-service apache2 start
-
-service apache2 enable
-
+FROM centos:latest
+MAINTAINER NewstarCorporation
+RUN yum -y install httpd
+CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 EXPOSE 80
