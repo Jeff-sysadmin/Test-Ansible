@@ -1,11 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
-apt-get update
+RUN apt-get update \
+   && apt-get install -y apache2
 
-apt-get install apache2
-
-service apache2 start
-
-service apache2 enable
-
+COPY index.html /var/www/html/
+WORKDIR /var/www/html
+CMD ["apachectl", "-D", "FOREGROUND"]
 EXPOSE 80
